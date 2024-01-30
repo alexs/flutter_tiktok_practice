@@ -1,19 +1,19 @@
 import 'package:flutter_tiktok_practice/domain/entities/video_post.dart';
 
-class LocalVideoModal{
+class LocalVideoModel{
   final String name;
   final String videoUrl;
   final int likes;
   final int views;
 
-  LocalVideoModal({
+  LocalVideoModel({
     required this.name,
     required this.videoUrl,
     this.likes = 0,
     this.views = 0,
   });
 
-  factory LocalVideoModal.fromJson(Map<String,dynamic> json) => LocalVideoModal(
+  factory LocalVideoModel.fromJson(Map<String,dynamic> json) => LocalVideoModel(
     name: json["name"] ?? 'No name', 
     videoUrl: json["videoUrl"], 
     likes: json["likes"] ?? 0, 

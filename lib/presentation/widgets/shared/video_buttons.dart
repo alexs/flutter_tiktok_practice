@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tiktok_practice/config/helpers/application_helper.dart';
 import 'package:flutter_tiktok_practice/domain/entities/video_post.dart';
 
 class VideoButtons extends StatelessWidget {  
@@ -38,7 +39,7 @@ class _CustomIconButton extends StatelessWidget {
         onPressed: (){},
         icon: Icon(iconData, color: color, size: 30)
       ),
-      Text('$value'),
+      Text(ApplicationHelper.number_to_h(value.toDouble())),
     ],);
   }
 }

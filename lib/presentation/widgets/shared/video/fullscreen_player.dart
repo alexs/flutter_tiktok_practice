@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tiktok_practice/presentation/widgets/shared/video/video_background.dart';
 import 'package:video_player/video_player.dart';
 
 class FullScreenPlayer extends StatefulWidget {
@@ -39,8 +40,9 @@ class _FullScreenPlayerState extends State<FullScreenPlayer> {
             child: Stack(children: [
         
               VideoPlayer(controller),
-              //Gradient
-              //Text caption
+              VideoBackground(
+                stops: const[0.8,1.0],
+              ),
               Positioned(
                 bottom: 50,
                 left: 20,
